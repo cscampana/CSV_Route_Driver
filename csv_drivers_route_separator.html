@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module csv_drivers_route_separator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>csv_drivers_route_separator</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Csirextreme%5Cdesktop%5Cpython%5Cclients%5Ccsv_drivers_route_separator.py">c:\users\sirextreme\desktop\python\clients\csv_drivers_route_separator.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;by&nbsp;@ccampana_<br>
+&nbsp;<br>
+This&nbsp;code&nbsp;has&nbsp;the&nbsp;objective&nbsp;of&nbsp;gathering&nbsp;two&nbsp;CSV&nbsp;containing&nbsp;information&nbsp;about&nbsp;zipcodes&nbsp;and&nbsp;drivers&nbsp;assigned&nbsp;to&nbsp;them<br>
+and&nbsp;a&nbsp;list&nbsp;of&nbsp;clients&nbsp;with:&nbsp;name,&nbsp;address,&nbsp;zip&nbsp;code,&nbsp;and&nbsp;phone&nbsp;number.&nbsp;The&nbsp;program&nbsp;sorts&nbsp;and&nbsp;outputs&nbsp;into&nbsp;different<br>
+text&nbsp;files&nbsp;each&nbsp;route,&nbsp;such&nbsp;that&nbsp;drivers&nbsp;are&nbsp;separated&nbsp;and&nbsp;can&nbsp;follow&nbsp;it.<br>
+&nbsp;<br>
+Version:&nbsp;0.1</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="csv.html">csv</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-csv_to_list"><strong>csv_to_list</strong></a>(file, type_of_data)</dt><dd><tt>This&nbsp;method&nbsp;parses&nbsp;a&nbsp;CSV&nbsp;into&nbsp;a&nbsp;list&nbsp;so&nbsp;that&nbsp;the&nbsp;program&nbsp;can&nbsp;read&nbsp;it&nbsp;and&nbsp;use&nbsp;its&nbsp;algorithm&nbsp;to&nbsp;sort&nbsp;it.<br>
+:param&nbsp;file:&nbsp;It&nbsp;is&nbsp;the&nbsp;file&nbsp;to&nbsp;be&nbsp;read&nbsp;from&nbsp;the&nbsp;system.<br>
+:param&nbsp;type_of_data:&nbsp;Defines&nbsp;whether&nbsp;it&nbsp;is&nbsp;a&nbsp;route&nbsp;file&nbsp;or&nbsp;a&nbsp;client&nbsp;list&nbsp;file.&nbsp;Accepts&nbsp;two&nbsp;parameters&nbsp;'DRIVER'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;'CLIENT'<br>
+:return:&nbsp;dictonary_clean_data<br>
+:rtype:&nbsp;dict</tt></dd></dl>
+ <dl><dt><a name="-file_header"><strong>file_header</strong></a>(route_name)</dt><dd><tt>This&nbsp;is&nbsp;a&nbsp;method&nbsp;that&nbsp;creates&nbsp;the&nbsp;file&nbsp;header&nbsp;for&nbsp;each&nbsp;text&nbsp;file.<br>
+&nbsp;<br>
+:param&nbsp;route_name:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;route&nbsp;assigned&nbsp;to&nbsp;that&nbsp;client.<br>
+:return:&nbsp;void</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>The&nbsp;main&nbsp;method,&nbsp;it&nbsp;defines&nbsp;all&nbsp;the&nbsp;logic&nbsp;of&nbsp;the&nbsp;program.</tt></dd></dl>
+ <dl><dt><a name="-write_to_file"><strong>write_to_file</strong></a>(name, zip_code, address, phone, route_name)</dt><dd><tt>This&nbsp;method&nbsp;writes&nbsp;to&nbsp;the&nbsp;file&nbsp;the&nbsp;result&nbsp;of&nbsp;the&nbsp;sorting,&nbsp;in&nbsp;such&nbsp;way&nbsp;that&nbsp;it&nbsp;helps&nbsp;the&nbsp;readability&nbsp;of&nbsp;the&nbsp;text<br>
+output<br>
+Parameters:&nbsp;name,&nbsp;zip_code,&nbsp;address,&nbsp;phone,&nbsp;driver_name.<br>
+:param&nbsp;name:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;client.<br>
+:param&nbsp;zip_code:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;client.<br>
+:param&nbsp;address:&nbsp;The&nbsp;address&nbsp;of&nbsp;the&nbsp;client.<br>
+:param&nbsp;phone:&nbsp;The&nbsp;phone&nbsp;of&nbsp;the&nbsp;client.<br>
+:param&nbsp;route_name:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;route&nbsp;assigned&nbsp;to&nbsp;that&nbsp;client.&nbsp;It&nbsp;serves&nbsp;to&nbsp;name&nbsp;the&nbsp;file&nbsp;and&nbsp;be&nbsp;easily&nbsp;sortable.<br>
+:type&nbsp;name:&nbsp;string<br>
+:type&nbsp;zip_code:&nbsp;string<br>
+:type&nbsp;address:&nbsp;string<br>
+:type&nbsp;phone:&nbsp;string<br>
+:type&nbsp;route_name:&nbsp;string<br>
+:return:&nbsp;void<br>
+&nbsp;<br>
+note::&nbsp;This&nbsp;method&nbsp;is&nbsp;made&nbsp;to&nbsp;only&nbsp;output&nbsp;the&nbsp;information&nbsp;of&nbsp;the&nbsp;route,&nbsp;the&nbsp;header&nbsp;was&nbsp;split&nbsp;in&nbsp;order&nbsp;to&nbsp;make&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code&nbsp;more&nbsp;modular.</tt></dd></dl>
+</td></tr></table>
+</body></html>
